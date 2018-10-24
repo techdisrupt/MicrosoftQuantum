@@ -1,4 +1,4 @@
-#Introduction to Quantum Computation with Microsoft Q#
+#Introduction to Quantum Computation with Microsoft Q
 
 Quantum is a vast field and an area that is burgeoning. You might have seen the news about various companies from IBM to Google to Microsoft working on Quantum Computers. There is a lot of hype and a lot of noise, but there is (IMHO) a dearth of opportunities to find a decent introduction to practial quantum computing, that doesn't thrust a mass of jargon at you, assuming that you are a Quantum expert, or that wades too much into the basics of Quantum Effects from first principles. This guide aims to be somewhat in the middle, the "Goldilocks" area where there is enough of the basics to get you some understanding, but also less basics and more about building some understanding of Quantum Compting with Q#
 
