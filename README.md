@@ -6,7 +6,7 @@ Quantum is a vast field and an area that is burgeoning. You might have seen the 
 
 The right place to start is the Qubit, because in some ways, we can explain some of the behaviour Quantum effects with Qubits in a loose hand-waving way without getting bogged down in the details of the Quantum physics and all its machinery. Later there will be guide for some of the details that have been over-looked.
 
-Of course the name Qubit, if you hadn't already guessed, originates from the concatenation of Qu (__Qu__antum) and bit (__B__inary Dig__it__). A binary digit is a representation that has two and only two possibilities, commonly referred to as 0 and 1. 
+Of course the name Qubit, if you hadn't already guessed, originates from the concatenation of Qu (_Qu_antum) and bit (_B_inary Dig_it_). A binary digit is a representation that has two and only two possibilities, commonly referred to as 0 and 1. 
 
 If you prefer these could be 'on' or 'off', but could be any two states. In the mechnical sense, you could call a light switch a bit, because it has two states, 'on' and 'off'. In machine language we commonly refer to states of the bit as 0 and 1. A bit can only be 0 OR 1 at any moment in time, much the same as a light switch. There is no inbetween state.
 
@@ -34,18 +34,16 @@ Let's look at example piece of code that handles a single Qubit. We cannot do mu
 
 # Minimal code to run a Single Qubit in Q
 
-using (qubits = Qubit[1])
+```using (qubits = Qubit[1])
 {
-
-
 }
-
+```
 
 Let's explain what is happening. The using keyword essentially brings into life or instantiates variables which only exist in the code block below, the curly brances. 
 
 Did you see how easy the syntax is for creating a qubit. We literally specify how many we want and in this case the number in the square brackets represents the number of Qubits. In this case one, a single solitarily lonely Qubit. If we wanted 2 Quibits we could simply state two in brackets. 
 
-using (qubits = Qubit[2])
+`using (qubits = Qubit[2])`
 
 If we wanted 10 we can state 10. Within reason there is no maximum. Each Qubit is addressed like an array element, so we can address with square brackets giving us [0] or [1] for example with each addressable Qubit starting at zero
 
@@ -119,7 +117,7 @@ namespace QubitReader
 }
 ```
 
-Looking at `Driver.cs`, we can see this is essentially the entry point to run your code. At the moment it's empty, rather akin to the traditional __C++__ or __C__ entry point for code, for example analagously below
+Looking at `Driver.cs`, we can see this is essentially the entry point to run your code. At the moment it's empty, rather akin to the traditional _C++_ or _C_ entry point for code, for example analagously below
 
 ```
 int main(void)
@@ -129,7 +127,7 @@ return 0;
 ```
 
 
-The __operation__ file is where we can perform the manipulation of the Qubits, and you'll see that there is a generic operation, with two empty brackets. This is a function that can be called anything we want, and inside the ()'s we can place both the input and output parameters, respectively, into these empty brackets. Later we'll see how we do this.
+The _operation_ file is where we can perform the manipulation of the Qubits, and you'll see that there is a generic operation, with two empty brackets. This is a function that can be called anything we want, and inside the ()'s we can place both the input and output parameters, respectively, into these empty brackets. Later we'll see how we do this.
 
 # Running the Quantum Project using VScode
 
@@ -204,7 +202,7 @@ namespace QubitDriver
 }
 ```
 
-Now lets do something interesting with the Qubit. Lets perform a rotation or transformation and then measure. Specifically lets try a __Hadamard__ called `H`, which puts our Qubit into a supeposition of 0 and 1 states. So lets do this using the command and then measure
+Now lets do something interesting with the Qubit. Lets perform a rotation or transformation and then measure. Specifically lets try a _Hadamard_ called `H`, which puts our Qubit into a supeposition of 0 and 1 states. So lets do this using the command and then measure
 
 `H (qubit[0]);`
 
@@ -248,7 +246,7 @@ dotnet run
 ```
 
 
-Your results are likely to be different. But there we have it. We have used 3 operations, __M__ (meaure qubit), __X__ (flip the bit from 0 to 1 and from 1 to 0) and __H__ (Hadamard) which puts the Qubit into a super position. Getting stat like this is tiresome in this way, so lets do a run and make several measurements in one go and then count the number of 0s which should be approximately half that of number of times we loop around, set at __100__, but feel free to experiment and change it.
+Your results are likely to be different. But there we have it. We have used 3 operations, _M_ (meaure qubit), _X_ (flip the bit from 0 to 1 and from 1 to 0) and _H_ (Hadamard) which puts the Qubit into a super position. Getting stat like this is tiresome in this way, so lets do a run and make several measurements in one go and then count the number of 0s which should be approximately half that of number of times we loop around, set at _100_, but feel free to experiment and change it.
 
 Now we update the code as follows for 100 samples
 
