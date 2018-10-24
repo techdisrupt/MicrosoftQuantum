@@ -29,13 +29,13 @@ Measuring a Qubit, we can now see the similarity between a traditional or classi
 
 That's bonkers. What this entails is that when it comes to measuring the Qubit state, we cannot have any intermediary states. However we can have multiple Qubits and if we were to measure them, we can measure the proportion in state 0 and in state 1, but not at the individual Qubit level.
 
-# Representing the Qubit in Q
+# Representing the Qubit in *Q#*
 
 As you would expect from Microsoft's dedicated language, Q#, the Qubit forms the unit of interest that a typical programmer will focus upon. Therefore it is worth to get to grips with how Qubits are employed and used in the language. 
 
 Let's look at example piece of code that handles a single Qubit. We cannot do much with it, but we'll learn how a Qubit is initially born, how it is measured and the operations we can perform on it. 
 
-# Minimal code to run a Single Qubit in Q
+# Minimal code to run a Single Qubit in *Q#*
 
 ```
 using (qubits = Qubit[1])
@@ -51,7 +51,7 @@ Did you see how easy the syntax is for creating a qubit. We literally specify ho
 
 If we wanted 10 we can state 10. Within reason there is no maximum. Each Qubit is addressed like an array element, so we can address with square brackets giving us `[0]` or `[1]` for example with each addressable Qubit starting at zero. 
 
-# Where to get Q from?
+# Where to get *Q#* from?
 
 As you might have guessed Q# pronounced Q sharp gets it name from another language that originated from Microsoft and that is c#, but there are other languages too in the same vain such as F#.
 
@@ -61,7 +61,7 @@ You'll need the right tools to run Q# and this means installing many of the dot 
 
 For those starting out I would recommend the Microsoft VScode product. It's longer name is Visual Studio Code. It's Free, it works on multiple platforms such as Windows, Mac and Linux. It's less fully featured then Visual Studio but also easier to handle and we want to focus on getting you running with Q# as quickly as possible. 
 
-## Download VScode and Q
+## Download VScode and *Q#*
 
 Follow the link to obtain the assets you need.
 
@@ -78,7 +78,7 @@ Follow the link to obtain the assets you need.
 
 [Install Download Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
-# Creating a first Q console application
+# Creating a first *Q#* console application
 
 Go into your terminal window or shell window and type the following, which will create a couple of files, the basis of Quantum Q# development.
 
@@ -248,7 +248,6 @@ dotnet run
 dotnet run 
 1
 ```
-
 
 Your results are likely to be different. But there we have it. We have used 3 operations, *M* (meaure qubit), *X* (flip the bit from 0 to 1 and from 1 to 0) and *H* (Hadamard) which puts the Qubit into a super position. Getting stat like this is tiresome in this way, so lets do a run and make several measurements in one go and then count the number of 0s which should be approximately half that of number of times we loop around, set at _100_, but feel free to experiment and change it.
 
