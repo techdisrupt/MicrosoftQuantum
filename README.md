@@ -14,13 +14,12 @@ What makes the Qubit different from the standard bit, that you find in the class
 
 Now we could go into all kinds of maths here, or we can simply make our lives easier and say that a Qubit is a linear combination of the state 0 and the state 1. The term superposition might mean something to you, but that is what you may call it here, there is a proportion of the Qubit in state 0 and in state 1, at the same time!
 
-We don't explain the reasoning by which this can be useful in our computations, I'll save that for extra reading if you are interested, but, by the ability of the Qubit to take on any value, it means that we can perform computations that would take much much longer on a classical machine. Quantum Parallelism, if you like, for this computational ability to operate more effectively.
+We don't explain the reasoning by which this can be useful in our computations, I'll save that for extra reading if you are interested, but, by the ability of the Qubit to take on any value, it means that we can perform computations that would take much much longer on a classical machine. Quantum Parallelism, if you like, for this computational ability to operate more effectively. We can describe a qubit Q as.
 
-For those that must see even a little math...
-
-Q = a |0> + b |1>
-
-Which means our quantum state has a proportion given in state |0> as a and in state b as |1>. The coefficients a and b must normalize, this won't be discussed here.
+```
+Q = a|0> + b|1>
+```
+Which means our quantum state has a proportion given in state `|0>` as a and in state b as `|1>`. The coefficients a and b must normalize, this won't be discussed here.
 
 Measuring a Qubit, we can now see the similarity between a traditional or classic bit, because whatever the internal state of the Qubit, when we measure an individual Qubit, we can only obtain a 0 or 1. Whoa! 
 
