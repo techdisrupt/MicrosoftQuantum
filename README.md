@@ -1,14 +1,18 @@
-# Introduction to Quantum Computation with Microsoft Q
+# Introduction to Quantum Computation with Microsoft *Q#*
 
-Quantum is a vast field and an area that is burgeoning. You might have seen the news about various companies from IBM to Google to Microsoft working on Quantum Computers. There is a lot of hype and a lot of noise, but there is (IMHO) a dearth of opportunities to find a decent introduction to practial quantum computing, that doesn't thrust a mass of jargon at you, assuming that you are a Quantum expert, or that wades too much into the basics of Quantum Effects from first principles. This guide aims to be somewhat in the middle, the "Goldilocks" area where there is enough of the basics to get you some understanding, but also less basics and more about building some understanding of Quantum Compting with Q#
+Quantum is a vast field and an area that is burgeoning. You might have seen the news about various companies from IBM to Google to Microsoft working on Quantum Computers. 
+
+There is a lot of hype and a lot of noise, but there is (IMHO) a dearth of opportunities to find a decent introduction to practical quantum computing, that doesn't thrust a mass of jargon at you, assuming that you are a Quantum expert, or that wades too much into the basics of Quantum Effects from first principles. 
+
+This guide aims to be somewhat in the middle, the "Goldilocks" area where there is enough of the basics to get you some understanding, but also less basics and more about building some understanding of Quantum Compting with Q#
 
 # Qubit, lets start at the heart of Quantum Computing
 
 The right place to start is the Qubit, because in some ways, we can explain some of the behaviour Quantum effects with Qubits in a loose hand-waving way without getting bogged down in the details of the Quantum physics and all its machinery. Later there will be guide for some of the details that have been over-looked.
 
-Of course the name Qubit, if you hadn't already guessed, originates from the concatenation of Qu (_Qu_antum) and bit (_B_inary Dig_it_). A binary digit is a representation that has two and only two possibilities, commonly referred to as 0 and 1. 
+Of course the name Qubit, if you hadn't already guessed, originates from the concatenation of Qu ( *Qu*antum ) and bit ( *B*inary Dig*it* ). A binary digit is a representation that has two and only two possibilities, commonly referred to as *0* and *1*. 
 
-If you prefer these could be 'on' or 'off', but could be any two states. In the mechnical sense, you could call a light switch a bit, because it has two states, 'on' and 'off'. In machine language we commonly refer to states of the bit as 0 and 1. A bit can only be 0 OR 1 at any moment in time, much the same as a light switch. There is no inbetween state.
+If you prefer these could be 'on' or 'off', but could be any two states. In the mechanical sense, you could call a light switch a bit, because it has two states, 'on' and 'off'. In machine language we commonly refer to states of the bit as 0 and 1. A bit can only be 0 OR 1 at any moment in time, much the same as a light switch. There is no in-between state.
 
 What makes the Qubit different from the standard bit, that you find in the classical sense and in your computer is that the Qubit can take on non binary values (i.e. doesn't have to be binary), whilst the standard bit can only take on two values. 
 
@@ -23,7 +27,7 @@ Which means our quantum state has a proportion given in state `|0>` as a and in 
 
 Measuring a Qubit, we can now see the similarity between a traditional or classic bit, because whatever the internal state of the Qubit, when we measure an individual Qubit, we can only obtain a 0 or 1. Whoa! 
 
-That's bonkers. What this etails is that when it comes to measuring the Qubit state, we cannot have any intermediary states. However we can have multiple Qubits and if we were to measure them, we can measure the proportion in state 0 and in state 1, but not at the individual Qubit level.
+That's bonkers. What this entails is that when it comes to measuring the Qubit state, we cannot have any intermediary states. However we can have multiple Qubits and if we were to measure them, we can measure the proportion in state 0 and in state 1, but not at the individual Qubit level.
 
 # Representing the Qubit in Q
 
@@ -39,23 +43,23 @@ using (qubits = Qubit[1])
 }
 ```
 
-Let's explain what is happening. The using keyword essentially brings into life or instantiates variables which only exist in the code block below, the curly brances. 
+Let's explain what is happening. The using keyword essentially brings into life or instantiates variables which only exist in the code block below, the curly braces. 
 
-Did you see how easy the syntax is for creating a qubit. We literally specify how many we want and in this case the number in the square brackets represents the number of Qubits. In this case one, a single solitarily lonely Qubit. If we wanted 2 Quibits we could simply state two in brackets. 
+Did you see how easy the syntax is for creating a qubit. We literally specify how many we want and in this case the number in the square brackets represents the number of Qubits. In this case one, a single solitary lonely Qubit. If we wanted 2 Qubits we could simply state two in brackets. 
 
 `using (qubits = Qubit[2])`
 
-If we wanted 10 we can state 10. Within reason there is no maximum. Each Qubit is addressed like an array element, so we can address with square brackets giving us [0] or [1] for example with each addressable Qubit starting at zero
+If we wanted 10 we can state 10. Within reason there is no maximum. Each Qubit is addressed like an array element, so we can address with square brackets giving us `[0]` or `[1]` for example with each addressable Qubit starting at zero. 
 
 # Where to get Q from?
 
-As you might have guessed Q# pronounced Q sharp gets it name from another language that originated from Microsoft and that is c#, but there are other languages too in the samily vain such as F#.
+As you might have guessed Q# pronounced Q sharp gets it name from another language that originated from Microsoft and that is c#, but there are other languages too in the same vain such as F#.
 
 You'll need the right tools to run Q# and this means installing many of the dot net dependencies, which are part of the Microsoft Framework.
 
 # What editor can I use?
 
-For those starting out I would recommend the Microsodt VScode product. It's longer name is Visual Studio Code. It's Free, it works on multiple platforms such as Windows, Mac and Linux. It's less fully featured then Visual Studio but also easier to handle and we want to focus on getting you running with Q# as quickly as possible. 
+For those starting out I would recommend the Microsoft VScode product. It's longer name is Visual Studio Code. It's Free, it works on multiple platforms such as Windows, Mac and Linux. It's less fully featured then Visual Studio but also easier to handle and we want to focus on getting you running with Q# as quickly as possible. 
 
 ## Download VScode and Q
 
@@ -76,7 +80,7 @@ Follow the link to obtain the assets you need.
 
 # Creating a first Q console application
 
-Go into your terminal window or shel window and type the following, which will create a couple of files, the basis of Quantum Q# development.
+Go into your terminal window or shell window and type the following, which will create a couple of files, the basis of Quantum Q# development.
 
 `dotnet new console -lang Q# --output QubitReader` 
 
@@ -117,7 +121,7 @@ namespace QubitReader
 }
 ```
 
-Looking at `Driver.cs`, we can see this is essentially the entry point to run your code. At the moment it's empty, rather akin to the traditional _C++_ or _C_ entry point for code, for example analagously below
+Looking at `Driver.cs`, we can see this is essentially the entry point to run your code. At the moment it's empty, rather akin to the traditional _C++_ or _C_ entry point for code, for example analogously below
 
 ```
 int main(void)
@@ -127,7 +131,7 @@ return 0;
 ```
 
 
-The _operation_ file is where we can perform the manipulation of the Qubits, and you'll see that there is a generic operation, with two empty brackets. This is a function that can be called anything we want, and inside the ()'s we can place both the input and output parameters, respectively, into these empty brackets. Later we'll see how we do this.
+The *operation* file is where we can perform the manipulation of the Qubits, and you'll see that there is a generic operation, with two empty brackets. This is a function that can be called anything we want, and inside the `()'s` we can place both the input and output parameters, respectively, into these empty brackets. Later we'll see how we do this.
 
 # Running the Quantum Project using VScode
 
@@ -137,7 +141,7 @@ Open VScode and open the QubitReader Folder that was created. You should be aske
 
 You should find the code runs, but you likely won't get any response if everything goes to plan.
 
-Lets now start working with a Qubit! The first thing we are going to do is write some code that can measure a Qubit and decide whether this Qubit is in the right state. Remember that the nature of quantum Qubits are basically probabilistic, and this means that whilst the Qubit can be in a superposition, when we measure it, it can only take on two possible values {0,1} or 0 or 1. 
+Lets now start working with a Qubit! The first thing we are going to do is write some code that can measure a Qubit and decide whether this Qubit is in the right state. Remember that the nature of quantum Qubits are basically probabilistic, and this means that whilst the Qubit can be in a superposition, when we measure it, it can only take on two possible values `{0,1}` or *0* or *1*. 
 
 # What does a Qubit look like? Quantum Hello World
 
@@ -147,9 +151,9 @@ The result of the `M` function or `Measurement` function is to return one of two
 
 `dotnet run`
 
-OK, looks right? Every-time we run the code, it looks we are always getting a 0. Hmmm, not very interesting. It appears we start off with a zero configuration of our Qubit and of course, we might want to check that is the case before we do something important with it. 
+OK, looks right? Every-time we run the code, it looks we are always getting a *0*. As you observe, not very interesting. It appears we start off with a zero configuration of our Qubit and of course, we might want to check that is the case before we do something important with it. 
 
-I want to point out there are some gotcha's here, but in the spirit of building things up gently I want you to understand some of the issues more fully later on.
+I want to point out there are some gotchas here, but in the spirit of building things up gently I want you to understand some of the issues more fully later on.
 
 ```
 namespace QubitReaderOperation
@@ -202,11 +206,11 @@ namespace QubitDriver
 }
 ```
 
-Now lets do something interesting with the Qubit. Lets perform a rotation or transformation and then measure. Specifically lets try a _Hadamard_ called `H`, which puts our Qubit into a supeposition of 0 and 1 states. So lets do this using the command and then measure
+Now lets do something interesting with the Qubit. Lets perform a rotation or transformation and then measure. Specifically lets try a _Hadamard_ called `H`, which puts our Qubit into a superposition of 0 and 1 states. So lets do this using the command and then measure
 
 `H (qubit[0]);`
 
-So now perform a Hadamard and measure
+So now perform a *Hadamard* and measure
 
 ```
 H (qubits[0]);
@@ -218,7 +222,7 @@ And run the code again. Something interesting happens. We get the following issu
 Unhandled Exception: System.AggregateException: One or more errors occurred. (Released qubits are not in zero state.) ---> Microsoft.Quantum.Simulation.Simulators.Exceptions.ReleasedQubitsAreNotInZeroState: Released qubits are not in zero state.
 ```
 
-What this means is that we need to release our qubits in the right way, and as the code error suggests, we should leave a qubit in the correct state. Lets do that. Add the following code before the end of the using block.
+What this means is that we need to release our qubits in the right way, and as the code error suggests, we should leave a Qubit in the correct state. Lets do that. Add the following code before the end of the using block.
 
 ```
 let c = M (qubits[0]);
@@ -246,7 +250,7 @@ dotnet run
 ```
 
 
-Your results are likely to be different. But there we have it. We have used 3 operations, _M_ (meaure qubit), _X_ (flip the bit from 0 to 1 and from 1 to 0) and _H_ (Hadamard) which puts the Qubit into a super position. Getting stat like this is tiresome in this way, so lets do a run and make several measurements in one go and then count the number of 0s which should be approximately half that of number of times we loop around, set at _100_, but feel free to experiment and change it.
+Your results are likely to be different. But there we have it. We have used 3 operations, *M* (meaure qubit), *X* (flip the bit from 0 to 1 and from 1 to 0) and *H* (Hadamard) which puts the Qubit into a super position. Getting stat like this is tiresome in this way, so lets do a run and make several measurements in one go and then count the number of 0s which should be approximately half that of number of times we loop around, set at _100_, but feel free to experiment and change it.
 
 Now we update the code as follows for 100 samples
 
@@ -289,7 +293,7 @@ namespace QubitReaderOperation
 }
 ```
 
-That is it. You can now see we have simulated some quantum events using Q#. Enjoy and play with the code. 
+That is it. You can now see we have simulated some quantum events using *Q#*. Enjoy and play with the code. 
 
 
 
