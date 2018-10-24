@@ -33,7 +33,8 @@ Let's look at example piece of code that handles a single Qubit. We cannot do mu
 
 # Minimal code to run a Single Qubit in Q
 
-```using (qubits = Qubit[1])
+```
+using (qubits = Qubit[1])
 {
 }
 ```
