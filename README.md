@@ -1,4 +1,4 @@
-#Introduction to Quantum Computation with Microsoft Q
+# Introduction to Quantum Computation with Microsoft Q
 
 Quantum is a vast field and an area that is burgeoning. You might have seen the news about various companies from IBM to Google to Microsoft working on Quantum Computers. There is a lot of hype and a lot of noise, but there is (IMHO) a dearth of opportunities to find a decent introduction to practial quantum computing, that doesn't thrust a mass of jargon at you, assuming that you are a Quantum expert, or that wades too much into the basics of Quantum Effects from first principles. This guide aims to be somewhat in the middle, the "Goldilocks" area where there is enough of the basics to get you some understanding, but also less basics and more about building some understanding of Quantum Compting with Q#
 
@@ -26,13 +26,13 @@ Measuring a Qubit, we can now see the similarity between a traditional or classi
 
 That's bonkers. What this etails is that when it comes to measuring the Qubit state, we cannot have any intermediary states. However we can have multiple Qubits and if we were to measure them, we can measure the proportion in state 0 and in state 1, but not at the individual Qubit level.
 
-#Representing the Qubit in Q#
+# Representing the Qubit in Q
 
 As you would expect from Microsoft's dedicated language, Q#, the Qubit forms the unit of interest that a typical programmer will focus upon. Therefore it is worth to get to grips with how Qubits are employed and used in the language. 
 
 Let's look at example piece of code that handles a single Qubit. We cannot do much with it, but we'll learn how a Qubit is initially born, how it is measured and the operations we can perform on it. 
 
-#Minimal code to run a Single Qubit in Q#
+# Minimal code to run a Single Qubit in Q
 
 using (qubits = Qubit[1])
 {
@@ -49,35 +49,34 @@ using (qubits = Qubit[2])
 
 If we wanted 10 we can state 10. Within reason there is no maximum. Each Qubit is addressed like an array element, so we can address with square brackets giving us [0] or [1] for example with each addressable Qubit starting at zero
 
-#Where to get Q# from?
+# Where to get Q from?
 
 As you might have guessed Q# pronounced Q sharp gets it name from another language that originated from Microsoft and that is c#, but there are other languages too in the samily vain such as F#.
 
 You'll need the right tools to run Q# and this means installing many of the dot net dependencies, which are part of the Microsoft Framework.
 
-#What editor can I use?
+# What editor can I use?
 
 For those starting out I would recommend the Microsodt VScode product. It's longer name is Visual Studio Code. It's Free, it works on multiple platforms such as Windows, Mac and Linux. It's less fully featured then Visual Studio but also easier to handle and we want to focus on getting you running with Q# as quickly as possible. 
 
-##Download VScode and Q# 
+## Download VScode and Q
 
 Follow the link to obtain the assets you need.
 
-[Download .NET 2.0 or higher](https://www.microsoft.com/net/download)
-[Download VScode](https://code.visualstudio.com/download)
+1. [Download .NET 2.0 or higher](https://www.microsoft.com/net/download)
+2. [Download VScode](https://code.visualstudio.com/download)
 
-
-Go to the shell and run
+3. Go to the shell and run
 
 `dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1809.701-preview"`
 
-Check that you can run VScode. 
+4. Check that you can run VScode. 
 
-Now get the Quantum Development Kit, follow the below link, press install and 
+5. Now get the Quantum Development Kit, follow the below link, press install and 
 
 [Install Download Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
-#Creating a first Q# console application
+# Creating a first Q console application
 
 Go into your terminal window or shel window and type the following, which will create a couple of files, the basis of Quantum Q# development.
 
@@ -132,7 +131,7 @@ return 0;
 
 The __operation__ file is where we can perform the manipulation of the Qubits, and you'll see that there is a generic operation, with two empty brackets. This is a function that can be called anything we want, and inside the ()'s we can place both the input and output parameters, respectively, into these empty brackets. Later we'll see how we do this.
 
-#Running the Quantum Project using VScode
+# Running the Quantum Project using VScode
 
 Open VScode and open the QubitReader Folder that was created. You should be asked to add any dependencies if these are missing. To test these boiler plate files work, go to the Terminal tab within the IDE and execute the following:
 
@@ -142,7 +141,7 @@ You should find the code runs, but you likely won't get any response if everythi
 
 Lets now start working with a Qubit! The first thing we are going to do is write some code that can measure a Qubit and decide whether this Qubit is in the right state. Remember that the nature of quantum Qubits are basically probabilistic, and this means that whilst the Qubit can be in a superposition, when we measure it, it can only take on two possible values {0,1} or 0 or 1. 
 
-#What does a Qubit look like? Quantum Hello World
+# What does a Qubit look like? Quantum Hello World
 
 Lets create a Qubit and see what it looks like. Change your renamed `QubitReader.qs` (was `Operations.qs`) to the following code below which will create a new namespace and operation function called `QubitR` which will measure the status of a Qubit. Simple, but the Quantum Equivalent of the "Hello World" and report this state back to us.
 
